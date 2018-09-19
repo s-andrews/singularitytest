@@ -12,7 +12,7 @@ Include: yum
 %post
   yum -y install wget
   yum -y install epel-release
-  yum update
+  yum -y update
   yum -y install R
   wget https://download1.rstudio.org/rstudio-1.1.456-x86_64.rpm
   yum -y localinstall rstudio-1.1.456-x86_64.rpm
