@@ -10,7 +10,7 @@ Include: yum
   touch ${SINGULARITY_ROOTFS}/i_made_a_file.txt
   
 %post
-  yum install numpy
+  yum -y install numpy
   
 %runscript
   python -c "import numpy; print numpy.__version__"
