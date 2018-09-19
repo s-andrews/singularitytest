@@ -10,10 +10,14 @@ Include: yum
   touch ${SINGULARITY_ROOTFS}/i_made_a_file.txt
   
 %post
-  yum -y install numpy
+  yum -y install wget
+  yum -y install epel-release
+  yum update
+  yum -y install R
+  wget https://download1.rstudio.org/rstudio-1.1.456-x86_64.rpm
+  yum -y localinstall rstudio-1.1.456-x86_64.rpm
   
 %runscript
-  python -c "import numpy; print numpy.__version__"
   
   
 
